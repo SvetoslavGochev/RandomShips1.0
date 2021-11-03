@@ -179,7 +179,7 @@
             return maxTier;
         }
 
-        public static void InputMinTier(out string Tier, out int minTier, out bool parseShip)
+        public static void InputMinTier(out string Tier, out int minTier,   out bool parseShip)
         {
             Tier = Console.ReadLine();
             parseShip = int.TryParse(Tier, out minTier);
