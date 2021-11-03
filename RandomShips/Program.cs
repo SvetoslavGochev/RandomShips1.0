@@ -6,15 +6,13 @@
     {
         static void Main(string[] args)
         {
-           
-
-            Console.WriteLine("Select  min tier ship: ");
+            Console.WriteLine("Select min tier ship: ");
             string Tier;
             int minTier;
             bool parseShip;
             InputMinTier(out Tier, out minTier, out parseShip);
 
-            Console.WriteLine("Select  max tier ship: ");
+            Console.WriteLine("Select max tier ship: ");
 
             int maxTier = InputMaxTier(ref Tier, minTier, ref parseShip);
 
@@ -186,7 +184,7 @@
             return nations;
         }
 
-        private static int InputMaxTier(ref string Tier, int minTier, ref bool a)
+        private static int InputMaxTier(ref string Tier, int minTier, ref bool parseShip)
         {
             var Tier1 = Console.ReadLine();
             int maxTier;
@@ -205,7 +203,7 @@
                     Console.WriteLine("Select number of 1-10!");
                     Console.WriteLine("Select маx tier: ");
                     Tier = Console.ReadLine();
-                    a = int.TryParse(Tier, out maxTier);
+                    parseShip = int.TryParse(Tier, out maxTier);
                 }
 
             }
@@ -213,18 +211,18 @@
             return maxTier;
         }
 
-        private static void InputMinTier(out string Tier, out int minTier, out bool a)
+        private static void InputMinTier(out string Tier, out int minTier, out bool parseShip)
         {
             Tier = Console.ReadLine();
-            a = int.TryParse(Tier, out minTier);
+            parseShip = int.TryParse(Tier, out minTier);
 
-            while (minTier <= 0 || minTier > 10 || a == false)
+            while (minTier <= 0 || minTier > 10 || parseShip == false)
             {
 
                 Console.WriteLine("Select number of 1-10!");
-                Console.WriteLine("Select  min tier: ");
+                Console.WriteLine("Select min tier: ");
                 Tier = Console.ReadLine();
-                a = int.TryParse(Tier, out minTier);
+                parseShip = int.TryParse(Tier, out minTier);
             }
         }
     }
