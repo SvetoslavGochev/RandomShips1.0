@@ -11,12 +11,12 @@
             Console.WriteLine("Select  min tier ship: ");
             string Tier;
             int minTier;
-            bool a;
-            InputMinTier(out Tier, out minTier, out a);
+            bool parseShip;
+            InputMinTier(out Tier, out minTier, out parseShip);
 
             Console.WriteLine("Select  max tier ship: ");
 
-            int maxTier = InputMaxTier(ref Tier, minTier, ref a);
+            int maxTier = InputMaxTier(ref Tier, minTier, ref parseShip);
 
 
             var random = new Random();
@@ -27,7 +27,7 @@
             var nations = "";
             nations = Console.ReadLine();
 
-            nations = Getnations(nations);
+            nations = GetNations(nations);
 
             GetWriteType();
 
@@ -123,7 +123,7 @@
             return ship;
         }
 
-        private static string Getnations(string nations)
+        private static string GetNations(string nations)
         {
             if (nations == "7")
             {
