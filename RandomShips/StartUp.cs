@@ -23,23 +23,22 @@
 
             GetWriteNations();
 
-            var nations = "";
-            nations = Console.ReadLine();
+
+            var nations = Console.ReadLine();
 
             nations = GetNations(nations);
 
             GetWriteType();
 
-            var ship = "";
-            ship = Console.ReadLine();
+
+            var ship = Console.ReadLine();
             ship = GetTypeShip(ship, nations);
 
             Console.WriteLine($"Play with {randomShips} tier {nations} {ship}.");
 
         }
 
-   
+
     }
 }
 
-  
