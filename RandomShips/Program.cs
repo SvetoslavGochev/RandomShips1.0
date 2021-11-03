@@ -20,7 +20,7 @@
 
 
             var random = new Random();
-            var aaaa = random.Next(minTier, maxTier);
+            var randomShips = random.Next(minTier, maxTier);
 
             GetWriteNations();
 
@@ -35,7 +35,7 @@
             ship = Console.ReadLine();
             ship = GetType(ship, nations);
 
-            Console.WriteLine($"Play with {aaaa} tier {nations} {ship}.");
+            Console.WriteLine($"Play with {randomShips} tier {nations} {ship}.");
 
         }
 
